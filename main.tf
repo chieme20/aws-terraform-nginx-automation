@@ -14,7 +14,6 @@ data "aws_ami" "latest_ubuntu" {
   }
 }
 
-# 2. Fetch your current AWS Account ID (Useful for security tags)
 data "aws_caller_identity" "current" {}
 
 # 3. Fetch the region you are currently working in
@@ -32,7 +31,6 @@ resource "aws_vpc" "karatu_vpc" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
 
-  # We use the 'merge' function to combine our common tags with a specific Name
   tags = merge(local.common_tags, {
     Name = "${var.project_name}-vpc"
   })
@@ -79,7 +77,7 @@ resource "aws_security_group" "karatu_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # In a real job, you'd use your specific IP here!
+    cidr_blocks = ["0.0.0.0/0"] 
   }
 
   # HTTP Access
@@ -90,7 +88,6 @@ resource "aws_security_group" "karatu_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # Allow all outgoing traffic (so the server can download updates)
   egress {
     from_port   = 0
     to_port     = 0
@@ -108,7 +105,6 @@ resource "aws_instance" "karatu_server" {
   vpc_security_group_ids      = [aws_security_group.karatu_sg.id]
   associate_public_ip_address = true 
 
-  # NEW: This script runs on startup
   user_data = <<-EOF
               #!/bin/bash
               sleep 30
