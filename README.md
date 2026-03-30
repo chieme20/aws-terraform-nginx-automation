@@ -54,3 +54,5 @@ To avoid unnecessary AWS costs, destroy the resources after testing:
 1. **Infrastructure as Code (IaC):** Mastered the declarative syntax of HCL to manage cloud lifecycles.
 2. **Cloud Networking:** Deep understanding of VPCs, Subnets, and Route Tables.
 3. **Linux Administration:** Automated software installation using Bash scripts via Cloud-Init (User Data).
+4. <img width="956" height="429" alt="welcome" src="https://github.com/user-attachments/assets/08e29cc2-2136-4948-9ea6-d32ef8715ab8" />
+<img width="956" height="429" alt="welcome" src="https://github.com/user-attachments/assets/0f8812bb-482a-40d4-aed9-ecbde28d3e5b" />
