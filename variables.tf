@@ -15,8 +15,7 @@ variable "instance_type" {
   type        = string
   default     = "t2.micro"
   
-  # This is the "Bouncer" your lecturer taught you about
-  validation {
+ validation {
     condition     = contains(["t2.micro", "t2.small", "t2.medium"], var.instance_type)
     error_message = "Instance type must be t2.micro, t2.small, or t2.medium."
   }
