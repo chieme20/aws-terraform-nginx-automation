@@ -1,6 +1,6 @@
-# ☁️ Automated AWS Web Infrastructure with Terraform
+Automated AWS Web Infrastructure with Terraform
 
-## 🎯 Project Overview
+Project Overview
 This repository contains **Infrastructure as Code (IaC)** to deploy a fully functional, secure, and automated web server environment on AWS. Instead of manual configuration, I used **Terraform** to architect a Virtual Private Cloud (VPC) from scratch and bootstrap an **Nginx** web server.
 
 ### Why this is "Production-Ready":
@@ -10,7 +10,7 @@ This repository contains **Infrastructure as Code (IaC)** to deploy a fully func
 
 ---
 ![Web Server Success](./screenshot.png)
-## 🏗️ Architecture Components
+##  Architecture Components
 - **VPC:** Custom 10.0.0.0/16 network for isolated cloud resources.
 - **Public Subnet:** Hosted in `us-east-1a` to provide internet access to the web server.
 - **Internet Gateway (IGW):** The bridge between the VPC and the public internet.
@@ -22,7 +22,7 @@ This repository contains **Infrastructure as Code (IaC)** to deploy a fully func
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 - **Cloud Provider:** AWS (Amazon Web Services)
 - **IaC Tool:** Terraform v1.7.5
 - **Web Server:** Nginx
@@ -30,7 +30,7 @@ This repository contains **Infrastructure as Code (IaC)** to deploy a fully func
 
 ---
 
-## 🚀 Deployment Instructions
+##  Deployment Instructions
 
 ### 1. Prerequisites
 - AWS CLI configured with your credentials.
@@ -50,7 +50,7 @@ To avoid unnecessary AWS costs, destroy the resources after testing:
 
 ---
 
-## 📈 Key Learning Outcomes
+## Key Learning Outcomes
 1. **Infrastructure as Code (IaC):** Mastered the declarative syntax of HCL to manage cloud lifecycles.
 2. **Cloud Networking:** Deep understanding of VPCs, Subnets, and Route Tables.
 3. **Linux Administration:** Automated software installation using Bash scripts via Cloud-Init (User Data).
