@@ -3,7 +3,7 @@ Automated AWS Web Infrastructure with Terraform
 Project Overview
 This repository contains **Infrastructure as Code (IaC)** to deploy a fully functional, secure, and automated web server environment on AWS. Instead of manual configuration, I used **Terraform** to architect a Virtual Private Cloud (VPC) from scratch and bootstrap an **Nginx** web server.
 
-### Why this is "Production-Ready":
+### Why this is "Production-Ready"
 - **Zero Manual Setup:** The entire networking stack is defined in code.
 - **Automated Bootstrapping:** Uses EC2 User Data (Bash) to install software on the first boot.
 - **Security-Centric:** Implements a Security Group "Firewall" following the principle of least privilege.
